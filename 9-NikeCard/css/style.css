@@ -1,0 +1,188 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background: #161623;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  position: relative;
+}
+.container .card {
+  position: relative;
+  background: #232323;
+  width: 320px;
+  height: 450px;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: 0.5s;
+}
+.container .card::before {
+  content: "";
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #86fcfd;
+  -webkit-clip-path: circle(150px at 80% 20%);
+          clip-path: circle(150px at 80% 20%);
+  transition: 0.3s ease-in-out;
+}
+.container .card:hover {
+  background: #000000;
+}
+.container .card:hover .imgBox {
+  top: 0;
+  transform: translateY(0);
+}
+.container .card:hover .contentBox {
+  height: 210px;
+}
+.container .card:hover .contentBox .size,
+.container .card:hover .contentBox .color,
+.container .card:hover .contentBox h2 {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0.3s;
+}
+.container .card:hover .contentBox a {
+  opacity: 1;
+  transform: translateY(0px);
+  transition-delay: 0.4s;
+}
+.container .card:hover .contentBox a:hover {
+  transition: 0s solid;
+  background: rgba(99, 232, 250, 0.6862745098);
+  border: 1px solid #fff;
+  color: #fff;
+}
+.container .card:hover::before {
+  -webkit-clip-path: circle(300px at 80% -20%);
+          clip-path: circle(300px at 80% -20%);
+}
+.container .card::after {
+  content: "Nike";
+  position: absolute;
+  top: 30%;
+  left: -20%;
+  font-size: 12em;
+  color: rgba(255, 255, 255, 0.1);
+  font-weight: 800;
+  font-style: italic;
+  z-index: 1;
+}
+.container .card .imgBox {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  height: 220px;
+  transition: 0.5s;
+  transform: translateY(-50%);
+}
+.container .card .imgBox img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  transform: translate(-50%, -50%) rotate(-20deg);
+  z-index: 1;
+}
+.container .card .contentBox {
+  position: absolute;
+  color: #fff;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  transition: all 1s;
+  z-index: 10;
+}
+.container .card .contentBox h2 {
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+.container .card .contentBox .size,
+.container .card .contentBox .color {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s;
+}
+.container .card .contentBox .size h3,
+.container .card .contentBox .size h3,
+.container .card .contentBox .color h3,
+.container .card .contentBox .color h3 {
+  font-weight: 300;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-right: 10px;
+}
+.container .card .contentBox .size span {
+  width: 26px;
+  height: 26px;
+  text-align: center;
+  line-height: 24px;
+  font-size: 14px;
+  font-weight: 600;
+  display: inline-block;
+  color: #111;
+  background: #fff;
+  border-radius: 4px;
+  margin: 0 5px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.container .card .contentBox .size span:hover {
+  color: #fff;
+  background: #dc7928;
+  border: 2px solid #fff;
+}
+.container .card .contentBox .color span {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+.container .card .contentBox .color span:nth-child(2) {
+  background: #548500;
+}
+.container .card .contentBox .color span:nth-child(3) {
+  background: #03a9f4;
+}
+.container .card .contentBox .color span:nth-child(4) {
+  background: #e91e63;
+}
+.container .card .contentBox .color span:hover {
+  border: 2px solid #fff;
+}
+.container .card .contentBox a {
+  display: inline-block;
+  padding: 10px 30px;
+  background: #b6fcfd;
+  border-radius: 4px;
+  margin-top: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #131313;
+  transform: translateY(50px);
+  transition: 0.2s;
+  opacity: 0;
+}/*# sourceMappingURL=style.css.map */

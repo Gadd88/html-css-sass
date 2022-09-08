@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    background-color:lightblue
+}
+
+.imagenes-container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagenes-container .imagen{
+    position: relative;
+    margin-right: -40px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.imagenes-container .imagen img{
+    width: 150px;
+    filter: drop-shadow(7px 7px 3px rgba(68, 68, 68, 0.384));
+    transition: all 0.2s ease-in-out;
+}
+
+.imagenes-container .imagen:hover img{
+    z-index: 1;
+    transform: scale(1.2);
+    transform: translateY(18px);
+}
+
+.imagenes-container .imagen .nombre{
+    position: absolute;
+    background-color: #000;
+    border-radius: 25px 25px 0 25px;
+    color: #fff;
+    display: none;
+    min-width: 100px;
+    width: 130px;
+    top: -25px;
+    left: calc(-50%);
+    padding: 10px 15px;
+    
+}
+
+.imagenes-container .imagen .nombre::before{
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    right: -.5%;
+    bottom: -21.4px;
+    border-top: 10px solid rgb(255, 0, 0);
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-radius: 5px;
+}
+
+/* el ::before con las 4 opciones de border son para formar el TRIANGULO */
+
+.imagenes-container .imagen:hover .nombre{
+    display: inline-block;
+}
+
+.imagenes-container .imagen .nombre .text{
+    text-align:center;
+}
+
+@media (max-width: 680px){
+    .imagenes-container{
+        flex-direction: column;
+    }
+    .imagenes-container .imagen .nombre{
+        position: absolute;
+        background-color: #000;
+        border-radius: 25px 45px 45px 25px;
+        color: #fff;
+        display: none;
+        min-width: 100px;
+        width: 130px;
+        top: 35px;
+        left: calc(-70%);
+        padding: 10px 15px;
+        z-index: 1;
+    }
+    .imagenes-container .imagen .nombre::before{
+        content: '';
+        position: absolute;
+        width: 2px;
+        height: 2px;
+        right: -15%;
+        bottom: 7px;
+        border-top: 10px solid transparent;
+        border-left: 10px solid rgb(21, 255, 0);
+        border-right: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        border-radius: 5px;
+    }
+    .imagenes-container .imagen:hover img{
+    z-index: 1;
+    transform: scale(1.2);
+    transform: translateX(18px);
+    margin: 10px auto;
+    }
+}

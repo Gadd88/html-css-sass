@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.contenedor{
+    background-color: #1c56a8;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+}
+
+/* position fixed permite eliminar todos los espacios blancos fuera del div */
+
+.contenedor .sub-contenedor{
+    width: 600px;
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 10px 20px;
+    box-shadow: 3px 5px 10px rgba(78, 205, 255, 0.76);
+}
+
+.contenedor .sub-contenedor .contenido{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 20px;
+    flex: auto;
+    justify-content: space-evenly;
+}
+
+.contenedor .sub-contenedor .contenido .icon{
+    margin-right: 10px;
+}
+
+.contenedor .sub-contenedor .contenido .mensaje{
+    padding: 10px;
+    line-height: 50px;
+    text-align: center;
+}
+.contenedor .sub-contenedor .contenido .mensaje .title{
+    font-weight: bold;
+}
+
+.contenedor .sub-contenedor .actions{
+    padding: 10px 0;
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+    margin-right: 60px;
+}
+
+.contenedor .sub-contenedor .actions button{
+    border: none;
+    padding: 15px;
+    min-width: 120px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    
+}
+
+.btn-descargar{
+    background-color: #029be1;
+    color: #fff;
+}
+    .btn-descargar:hover{
+        background-color: #0280de;
+    }
+
+.btn-volver{
+    background-color: #eee;
+    border: solid 1px #ccc;
+}
+    .btn-volver:hover{
+        background-color: #ccc;
+    }
+
+@media (max-width: 600px){
+    .contenedor .sub-contenedor{
+        width: 80%;
+    }
+    .contenedor .sub-contenedor .contenido{
+        flex-direction: column;
+        margin-top: 50px;
+    }
+
+    .contenedor .sub-contenedor .actions{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+    }
+    button{
+        width: 60%;
+    }
+}
