@@ -36,6 +36,18 @@
                     color: #fff;
                     text-decoration: none;
                     margin-left: 40px;
+                    &::after{
+                        content: '';
+                        width: 0;
+                        position: absolute;
+                        bottom: -5px;
+                        left: 0;
+                        transition: .3s;
+                    }
+                    &:hover::after{
+                        width: 100%;
+                        border: 1px solid #fff;
+                    }
                 }
             }
         }

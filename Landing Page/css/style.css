@@ -40,6 +40,18 @@
   text-decoration: none;
   margin-left: 40px;
 }
+.main header .navigation li a::after {
+  content: "";
+  width: 0;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  transition: 0.3s;
+}
+.main header .navigation li a:hover::after {
+  width: 100%;
+  border: 1px solid #fff;
+}
 .main .content {
   position: relative;
   width: 100%;
