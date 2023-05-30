@@ -54,10 +54,24 @@ header .logo img {
   margin: 0 10px;
 }
 .navigation li a {
+  transition: all 0.5s;
+  position: relative;
   color: #fff;
   text-decoration: none;
   font-weight: 500;
   letter-spacing: 1px;
+}
+.navigation li a::before {
+  content: "";
+  width: 0;
+  position: absolute;
+  bottom: -5px;
+  right: 0;
+  transition: 0.3s;
+}
+.navigation li a:hover::before {
+  width: 100%;
+  border: 1px solid #de0611;
 }
 .navigation li:hover a {
   color: #de0611;
@@ -84,9 +98,6 @@ header .logo img {
           backdrop-filter: blur(10px);
 }
 .search input::-moz-placeholder {
-  color: #fff;
-}
-.search input:-ms-input-placeholder {
   color: #fff;
 }
 .search input::placeholder {
