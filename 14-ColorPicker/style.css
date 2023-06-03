@@ -1,0 +1,118 @@
+.container {
+  height: 100vh;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: rgb(61, 3, 159);
+  background: linear-gradient(90deg, rgb(61, 3, 159) 0%, rgb(81, 26, 174) 35%, rgb(150, 43, 226) 100%);
+}
+.container h1 {
+  text-align: center;
+  color: #fff;
+  filter: drop-shadow(0 3px 2px black);
+}
+.container .salida {
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+  border: none;
+  width: 50%;
+  margin: 1rem 35%;
+  border-radius: 10px;
+  border: 1px solid #fff;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 5px 5px 12px rgba(255, 255, 255, 0.6);
+  height: 250px;
+}
+.container .salida p {
+  font-size: 1.2rem;
+  letter-spacing: 0.4rem;
+  color: #fff;
+  border: 1px solid transparent;
+  border-radius: 15px;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  z-index: 2;
+  cursor: pointer;
+}
+.container .salida .alerta {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  font-size: 10px;
+  line-height: 15px;
+  padding: 5px 0;
+  width: 60%;
+}
+.container .color-div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.container .color-div input {
+  border-radius: 10px;
+  height: 50px;
+  min-width: 100px;
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+}
+.container .color-div input[type=button] {
+  color: #000;
+  font-weight: bold;
+}
+.container .favoritos {
+  background-color: #fff;
+  width: 50%;
+  border-radius: 15px;
+  margin: 20px 0 0 0;
+  height: 250px;
+  text-align: center;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .favoritos .lista-colores {
+  display: flex;
+  padding: 0;
+  flex-wrap: wrap;
+  height: 60%;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+}
+.container .favoritos .lista-colores li {
+  list-style: none;
+  height: 15px;
+  width: 60px;
+  border-radius: 15px;
+  text-transform: uppercase;
+  padding: 15px;
+  color: #fff;
+  border: 1px solid #ebebeb;
+}
+.container .favoritos .limpiarFav {
+  border-radius: 10px;
+  width: 150px;
+  height: 50px;
+  margin-bottom: 10px;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+.container .favoritos .limpiarFav:hover {
+  border: 1px solid #15a88d;
+}
+.container .favoritos .limpiarFav:active {
+  position: relative;
+  top: 2px;
+  border: 3px solid royalblue;
+}/*# sourceMappingURL=style.css.map */
